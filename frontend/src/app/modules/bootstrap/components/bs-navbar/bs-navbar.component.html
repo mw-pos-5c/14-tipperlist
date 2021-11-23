@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item" *ngFor="let item of navItems; let i = index">
-          <a (click)="navItemClick.emit(i)" class="nav-link active" href="#">{{ item }}</a>
+          <a (click)="navItemClick.emit(i)" class="nav-link active">{{ item }}</a>
         </li>
       </ul>
     </div>

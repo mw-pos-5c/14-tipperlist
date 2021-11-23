@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {CoreModule} from "./modules/core/core.module";
 import {BootstrapModule} from "./modules/bootstrap/bootstrap.module";
+import {TipperModule} from "./modules/tipper/tipper.module";
+import {SharedModule} from "./modules/shared/shared.module";
 
 @NgModule({
   declarations: [
@@ -13,8 +15,10 @@ import {BootstrapModule} from "./modules/bootstrap/bootstrap.module";
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BootstrapModule,
+    SharedModule,
     CoreModule,
-    BootstrapModule
+    TipperModule
   ],
   providers: [],
   bootstrap: [AppComponent]

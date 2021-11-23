@@ -1,1 +1,24 @@
-<p>tipper-overview works!</p>
+
+
+<app-bs-button (click)="selectGroup('')">Alle</app-bs-button>
+<app-bs-button *ngFor="let group of service.tipperGroups" (click)="selectGroup(group)">{{group}}</app-bs-button>
+
+<div class="container">
+  <div class="row">
+    <div class="col"></div>
+    <div class="col">
+      <h4>Tipps von {{selectedName}}</h4>
+      <input type="number" [(ngModel)]="minGoal">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <app-tipper-names [tippers]="service.tippers" [selectedGroup]="selectedGroup" (tipperSelected)="tipperSelected($event)"></app-tipper-names>
+    </div>
+    <div class="col">
+      <app-tipped-matches [minDiff]="minGoal" [tipps]="service.tipps" [matches]="service.matches"></app-tipped-matches>
+    </div>
+  </div>
+</div>
+
+

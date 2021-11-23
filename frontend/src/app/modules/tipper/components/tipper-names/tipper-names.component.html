@@ -1,1 +1,17 @@
-<p>tipper-names works!</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Gruppe</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let tipper of tippers | filterByGroup:selectedGroup" (click)="tipperSelected.emit(tipper)">
+      <th scope="row">{{tipper.id}}</th>
+      <td>{{tipper.name}}</td>
+      <td>{{tipper.groups}}</td>
+    </tr>
+  </tbody>
+</table>

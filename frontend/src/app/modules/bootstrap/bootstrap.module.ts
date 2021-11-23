@@ -11,7 +11,8 @@ import { BsButtonComponent } from './components/bs-button/bs-button.component';
     BsButtonComponent
   ],
   exports: [
-    BsNavbarComponent
+    BsNavbarComponent,
+    BsButtonComponent
   ],
   imports: [
     CommonModule

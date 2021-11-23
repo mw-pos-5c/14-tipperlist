@@ -1,1 +1,19 @@
-<p>tipped-matches works!</p>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Match</th>
+    <th scope="col">Result</th>
+    <th scope="col">Tipp</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let tipp of tipps | goalDiff:minDiff">
+    <th scope="row">{{tipp.matchWithResultId}}</th>
+    <td><app-flag [match]="getMatchTipp(tipp.seq)"></app-flag></td>
+    <td>{{getMatchTipp(tipp.seq) | result}}</td>
+    <td>{{tipp | result}}</td>
+  </tr>
+  </tbody>
+</table>
