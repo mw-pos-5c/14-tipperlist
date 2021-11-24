@@ -5,6 +5,7 @@ import { AdminRoutingModule } from './admin-routing.module';
 import { TheOnlyComponentComponent } from './components/the-only-component/the-only-component.component';
 import {SharedModule} from "../shared/shared.module";
 import {BootstrapModule} from "../bootstrap/bootstrap.module";
+import {CoreModule} from "../core/core.module";
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import {BootstrapModule} from "../bootstrap/bootstrap.module";
     CommonModule,
     AdminRoutingModule,
     SharedModule,
+    CoreModule,
     BootstrapModule
   ]
 })
